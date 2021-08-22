@@ -1,0 +1,15 @@
+{
+  "scripts": {
+    "server": "live-server --port=5001 --watch=index.html",
+    "watch:pug": "npx pug index.pug -w",
+    "watch:sass": "npx sass styles/styles.scss:styles/styles.css -w",
+    "dev": "concurrently \" yarn watch:pug\" \" yarn watch:sass\" \" yarn server\""
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.1",
+    "live-server": "^1.2.1",
+    "prettier": "2.3.2",
+    "pug": "^3.0.2",
+    "sass": "^1.37.5"
+  }
+}
