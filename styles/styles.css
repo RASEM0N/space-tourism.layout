@@ -16,5 +16,151 @@
   font-display: swap;
   src: url("fonts/spaceagecyrillic-regular.woff") format("woff"), url("fonts/spaceagecyrillic-regular.ttf") format("ttf");
 }
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  color: inherit;
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  padding: 0;
+}
+
+body {
+  font-family: "SF Display Pro", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  background-color: rgba(2, 2, 2, 0.7);
+  position: relative;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+
+.page {
+  padding: 100px 0;
+  min-height: 100vh;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1220px;
+}
+
+.menu__list {
+  display: flex;
+}
+.menu__item {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+}
+.menu__item + .menu__item {
+  margin-left: 30px;
+}
+.menu__item_actived {
+  color: #cb0e0e;
+}
+.phone {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.header {
+  background-image: url("images/cover_bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 78px;
+  padding-bottom: 142px;
+  min-height: 100vh;
+}
+.header::before {
+  content: "";
+  background: linear-gradient(180deg, #010203 0%, rgba(1, 2, 3, 0) 100%);
+  transform: rotate(-180deg);
+  position: absolute;
+  top: 45%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 0;
+}
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100vh - 78px - 142px);
+}
+.header__top {
+  display: flex;
+  align-items: center;
+}
+.header__menu {
+  flex: 1;
+}
+.header__phone {
+  margin-right: 22px;
+}
+.header__content {
+  z-index: 1;
+  align-self: flex-start;
+  max-width: 600px;
+}
+.header__title {
+  font-family: "Space Age", sans-serif;
+  font-size: 60px;
+  line-height: 60px;
+  margin-bottom: 35px;
+}
+.header__title span {
+  font-size: 110px;
+  line-height: 65px;
+  text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  display: block;
+}
+.header__text {
+  font-size: 24px;
+  line-height: 29px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.header__btn {
+  font-size: 24px;
+  line-height: 29px;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  padding: 15px 0;
+  width: 100%;
+}
+.header__description {
+  z-index: 1;
+  display: flex;
+  align-self: flex-end;
+}
+.header__description-text {
+  width: 165px;
+}
+.header__description-text + .header__description-text {
+  margin-left: 52px;
+}
 
 /*# sourceMappingURL=styles.css.map */

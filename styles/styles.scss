@@ -2,3 +2,126 @@
 @import 'vars';
 @import 'libs';
 @import 'global';
+@import 'commons';
+
+.header {
+    background-image: url('images/cover_bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    padding-top: 78px;
+    padding-bottom: 142px;
+
+    min-height: 100vh;
+
+    &::before {
+        content: '';
+
+        background: linear-gradient(180deg, #010203 0%, rgba(1, 2, 3, 0) 100%);
+        transform: rotate(-180deg);
+
+        position: absolute;
+        top: 45%;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        z-index: 0;
+    }
+
+    &__inner {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        height: calc(100vh - 78px - 142px);
+    }
+
+    //#region TOP
+    &__top {
+        display: flex;
+        align-items: center;
+    }
+
+    &__menu {
+        flex: 1;
+    }
+
+    &__phone {
+        margin-right: 22px;
+    }
+
+    &__login {
+    }
+
+    //#endregion
+
+    //#region CONTENT
+    &__content {
+        z-index: 1;
+
+        align-self: flex-start;
+
+        max-width: 600px;
+    }
+
+    &__title {
+        font-family: $ff_space;
+        font-size: 60px;
+        line-height: 60px;
+
+        //margin-bottom: 18px;
+        margin-bottom: 35px;
+    }
+
+    &__title span {
+        font-size: 110px;
+        //line-height: 110px;
+        line-height: 65px;
+        text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+        display: block;
+    }
+
+    &__text {
+        font-size: 24px;
+        line-height: 29px;
+
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+
+    &__btn {
+        font-size: 24px;
+        line-height: 29px;
+        text-transform: uppercase;
+
+        border: 1px solid #ffffff;
+
+        padding: 15px 0;
+
+        width: 100%;
+    }
+
+    //#endregion
+
+    //#region DESCRIPTION
+    &__description {
+        z-index: 1;
+
+        display: flex;
+        align-self: flex-end;
+    }
+
+    &__description-text {
+        width: 165px;
+
+        & + & {
+            margin-left: 52px;
+        }
+    }
+
+    //#endregion
+}
