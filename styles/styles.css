@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "SF Display Pro";
   font-weight: normal;
@@ -34,10 +35,15 @@ a {
 button {
   color: inherit;
   cursor: pointer;
+  transition: all 0.3s ease-in-out;
   background-color: transparent;
   border: none;
   outline: none;
   padding: 0;
+}
+button:hover {
+  background-color: rgba(0, 27, 161, 0.08);
+  transform: scale(1.05);
 }
 
 body {
@@ -56,11 +62,64 @@ body {
   padding: 100px 0;
   min-height: 100vh;
 }
+.page__title {
+  font-family: "Space Age", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  position: relative;
+  z-index: 10;
+  margin-bottom: 100px;
+}
 
 .container {
   margin: 0 auto;
   padding: 0 10px;
   max-width: 1220px;
+}
+
+.table {
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  text-transform: lowercase;
+}
+.table__list {
+  display: flex;
+}
+.table__item {
+  flex: 1;
+}
+.table__title {
+  border-top: 1px solid #ffffff;
+  padding: 10px 0;
+}
+.table__info {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #ffffff;
+  padding: 10px 0;
+}
+.table__info-count {
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 43px;
+  margin-bottom: 1px;
+}
+.table__info-unit {
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 17px;
+}
+.table__extra {
+  font-size: 12px;
+  line-height: 14px;
+  text-align: left;
+  text-transform: lowercase;
+  color: #e5e5e5;
+  margin-top: 20px;
+}
+.table__extra::before {
+  content: "✱";
+  margin-right: 7.2px;
 }
 
 .menu__list {
@@ -161,6 +220,86 @@ body {
 }
 .header__description-text + .header__description-text {
   margin-left: 52px;
+}
+
+.about-us {
+  background-image: url("images/us&special_bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.about-us::before {
+  content: "";
+  background: linear-gradient(180deg, #010203 8.85%, rgba(1, 2, 3, 0) 86.98%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 450px;
+}
+.about-us__inner {
+  position: relative;
+}
+.about-us__box {
+  display: flex;
+}
+.about-us__box + .about-us__box {
+  margin-top: 100px;
+}
+.about-us__box_type_reverse .about-us__box-content {
+  order: -1;
+}
+.about-us__box_type_reverse .about-us__box-img {
+  margin-right: 0;
+  margin-left: 100px;
+}
+.about-us__box-img {
+  margin-right: 100px;
+}
+.about-us__box-img img {
+  transition: all 0.6s ease-in-out;
+}
+.about-us__box-img img:hover {
+  transform: scale(1.05);
+}
+.about-us__box-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.about-us__box-title {
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 36px;
+  margin-bottom: 5px;
+}
+.about-us__box-path {
+  font-size: 12px;
+  line-height: 14px;
+  text-transform: uppercase;
+  color: #036cca;
+  margin-bottom: 30px;
+}
+.about-us__box-description {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 50px;
+}
+.about-us__box-text {
+  font-size: 16px;
+  line-height: 19px;
+  max-width: 166px;
+}
+.about-us__table {
+  flex: 1;
+}
+.about-us__box-btn {
+  font-size: 18px;
+  line-height: 21px;
+  border: 1px solid #ffffff;
+  padding: 20px 10px;
+  width: 50%;
 }
 
 /*# sourceMappingURL=styles.css.map */

@@ -20,11 +20,17 @@ button {
     color: inherit;
     cursor: pointer;
 
+    transition: all 0.3s ease-in-out;
     background-color: transparent;
     border: none;
     outline: none;
 
     padding: 0;
+
+    &:hover {
+        background-color: rgba(0, 27, 161, 0.08);
+        transform: scale(1.05);
+    }
 }
 
 body {
@@ -45,6 +51,17 @@ body {
     padding: 100px 0;
 
     min-height: 100vh;
+
+    &__title {
+        font-family: $ff_space;
+        font-size: 48px;
+        line-height: 48px;
+
+        position: relative;
+        z-index: 10;
+
+        margin-bottom: 100px;
+    }
 }
 
 .container {
@@ -52,4 +69,62 @@ body {
     padding: 0 10px;
 
     max-width: 1220px;
+}
+
+.table {
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    text-transform: lowercase;
+
+    &__list {
+        display: flex;
+    }
+
+    &__item {
+        flex: 1;
+    }
+
+    &__title {
+        border-top: 1px solid #ffffff;
+
+        padding: 10px 0;
+    }
+
+    &__info {
+        border-top: 1px solid #ffffff;
+        border-bottom: 1px solid #ffffff;
+
+        padding: 10px 0;
+    }
+
+    &__info-count {
+        font-weight: bold;
+        font-size: 36px;
+        line-height: 43px;
+
+        margin-bottom: 1px;
+    }
+
+    &__info-unit {
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__extra {
+        font-size: 12px;
+        line-height: 14px;
+        text-align: left;
+        text-transform: lowercase;
+        color: #e5e5e5;
+
+        margin-top: 20px;
+
+        &::before {
+            content: '✱';
+
+            margin-right: 7.2px;
+        }
+    }
 }
