@@ -40,3 +40,24 @@
 
     padding: 20px 10px;
 }
+
+.input {
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+
+    background: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #ffffff;
+
+    padding-bottom: 20px;
+}
+
+.input::placeholder {
+    font-family: $ff_sf;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 17px;
+    color: #ffffff;
+}

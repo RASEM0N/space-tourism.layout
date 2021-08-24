@@ -144,7 +144,7 @@ mixin star(text)
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
-section.page.special
+//section.page.special
     .container
         .page__title Спец. предложения
         .special__inner
@@ -189,7 +189,54 @@ section.page.special
                 button.slider__btn.slider__btn_type_right
                     include images/slider-arrow.svg
             p.special__subtitle Ты знаешь о Космическом законе – представь себе то, что ты хочешь, и оно войдет в твою жизнь.
-
-
-
-
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+section.page.contacts
+    .container
+        .contacts__inner
+            .contacts__inner-top
+                .contacts__box
+                    h3.contacts__box-title контакты
+                    p.contacts__box-text Оставь свои контакты и мы перезвоним тебе в ближайшие 100 лет!
+                .contacts__box
+                    h3.contacts__box-title гарантии
+                    p.contacts__box-text Ни одна моя ракета еще не сделала удачную попытку, потому что в ней не было тебя! Будь первым! Колонизируй Марс! Илон Маск
+            .contacts__inner-bottom
+                form.contacts__form
+                    input.input.contacts__input(placeholder="ФИО")
+                    input.input.contacts__input(placeholder="Имя ребенка или внука (на всякий случай)")
+                    input.input.contacts__input(placeholder="Телефон")
+                    button.btn.contacts__form-btn Забронировать полет
+                img.contacts__img(src="images/contacts_ilon-mask.png")
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+footer.footer
+    .container
+        .footer__inner
+            .footer__description
+                p.footer__description-text Служба поддержки работает межгалактично и суборбитально
+                p.footer__description-text График приема посетителей строго по записи
+            ul.footer__list
+                li.footer__item
+                    a.footer__item-link(href="#") о нас
+                li.footer__item
+                    a.footer__item-link(href="#") стоимость
+                li.footer__item
+                    a.footer__item-link(href="#") доп.услуги
+                li.footer__item
+                    a.footer__item-link(href="#") гарантии
+                li.footer__item
+                    a.footer__item-link(href="#") новости
+            ul.footer__list
+                li.footer__item
+                    a.footer__item-link(href="spacex.com") spacex.com
+                li.footer__item
+                    a.footer__item-link(href="blueorigin.com") blueorigin.com
+                li.footer__item
+                    a.footer__item-link(href="virgingalactic.com") virgingalactic.com
+                li.footer__item.footer__item_color_red
+                    a.footer__item-link(href="tel:080000000000") 0 800 000 000 00
+                li.footer__item
+                    a.footer__item-link(href="#") мкс

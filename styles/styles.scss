@@ -427,3 +427,154 @@
         margin-top: 50px;
     }
 }
+
+.contacts {
+    background-color: #010203;
+
+    &__inner {
+    }
+
+    &__inner-top {
+        display: flex;
+
+        margin-bottom: 100px;
+    }
+
+    &__box {
+        flex: 1;
+
+        & + & {
+            margin-left: 150px;
+        }
+    }
+
+    &__box-title {
+        font-family: $ff_space;
+        font-size: 48px;
+        line-height: 48px;
+
+        margin-bottom: 46px;
+    }
+
+    &__box-text {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    &__inner-bottom {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+
+        width: 500px;
+    }
+
+    &__input {
+        display: block;
+
+        & + & {
+            margin-top: 60px;
+        }
+    }
+
+    &__form-btn {
+        margin-top: 70px;
+    }
+
+    &__img {
+    }
+}
+
+.footer {
+    background-image: url('images/footer_ng.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+    padding-top: 100px;
+
+    height: 433px;
+
+    &::before {
+        content: '';
+
+        background: linear-gradient(180deg, #010203 9.9%, rgba(1, 2, 3, 0) 100%);
+        transform: rotate(-180deg);
+
+        position: absolute;
+        top: 50%;
+        left: 0;
+        bottom: 0;
+        right: 0;
+    }
+
+    &::after {
+        content: '';
+
+        background: linear-gradient(180deg, #010203 9.9%, rgba(1, 2, 3, 0) 100%);
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 50%;
+        right: 0;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 10;
+
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    &__description {
+        display: flex;
+        flex-direction: column;
+
+        margin-right: 50px;
+
+        max-width: 165px;
+    }
+
+    &__description-text {
+        font-family: Roboto, sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+
+        & + & {
+            margin-top: 50px;
+        }
+    }
+
+    &__list {
+        list-style: none;
+
+        & + & {
+            margin-left: 100px;
+        }
+    }
+
+    &__item {
+        & + & {
+            margin-top: 20px;
+        }
+    }
+
+    &__item_color_red {
+        color: $color_red;
+    }
+
+    &__item-link {
+        font-size: 16px;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+}

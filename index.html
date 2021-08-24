@@ -327,6 +327,25 @@ body {
   padding: 20px 10px;
 }
 
+.input {
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+  background: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid #ffffff;
+  padding-bottom: 20px;
+}
+
+.input::placeholder {
+  font-family: "SF Display Pro", sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 17px;
+  color: #ffffff;
+}
+
 .header {
   background-image: url("images/cover_bg.png");
   background-position: center center;
@@ -632,6 +651,115 @@ body {
   margin-top: 50px;
 }
 
+.contacts {
+  background-color: #010203;
+}
+.contacts__inner-top {
+  display: flex;
+  margin-bottom: 100px;
+}
+.contacts__box {
+  flex: 1;
+}
+.contacts__box + .contacts__box {
+  margin-left: 150px;
+}
+.contacts__box-title {
+  font-family: "Space Age", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 46px;
+}
+.contacts__box-text {
+  font-size: 24px;
+  line-height: 29px;
+}
+.contacts__inner-bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.contacts__form {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+}
+.contacts__input {
+  display: block;
+}
+.contacts__input + .contacts__input {
+  margin-top: 60px;
+}
+.contacts__form-btn {
+  margin-top: 70px;
+}
+.footer {
+  background-image: url("images/footer_ng.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  padding-top: 100px;
+  height: 433px;
+}
+.footer::before {
+  content: "";
+  background: linear-gradient(180deg, #010203 9.9%, rgba(1, 2, 3, 0) 100%);
+  transform: rotate(-180deg);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.footer::after {
+  content: "";
+  background: linear-gradient(180deg, #010203 9.9%, rgba(1, 2, 3, 0) 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 50%;
+  right: 0;
+}
+.footer__inner {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  justify-content: flex-end;
+}
+.footer__description {
+  display: flex;
+  flex-direction: column;
+  margin-right: 50px;
+  max-width: 165px;
+}
+.footer__description-text {
+  font-family: Roboto, sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+}
+.footer__description-text + .footer__description-text {
+  margin-top: 50px;
+}
+.footer__list {
+  list-style: none;
+}
+.footer__list + .footer__list {
+  margin-left: 100px;
+}
+.footer__item + .footer__item {
+  margin-top: 20px;
+}
+.footer__item_color_red {
+  color: #cb0e0e;
+}
+.footer__item-link {
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+}
+
 /*# sourceMappingURL=styles.css.map */
 </style><body><!-- ---- --- --- MIXINS --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!--header.page.header.container
     .header__inner
@@ -743,13 +871,50 @@ body {
     .page__title Успей забронировать!
     .booking__description
         p.booking__description-text Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года. Компания уже несколько лет продает билеты на такие полеты по 250 тыс долл.
-        p.booking__description-text Virgin Galactic получила задатков более чем 80 млн долл, а количество желающих превышает 600 человек.--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><section class="page special"><div class="container"><div class="page__title">Спец. предложения</div><div class="special__inner"><div class="special__list"><div class="special__item"><div class="special__item-info"><p class="special__item-text">Забронируй полет <span>прямо сейчас</span> и получи скидку 1000$</p><div class="special__price"><div class="special__price-old">250 000 $</div><div class="special__price-now">249 000 $</div></div></div><button class="btn special__item-btn">Забронировать билет</button></div><div class="special__item"><div class="special__item-info"><p class="special__item-text">Приведи друга и получи <span>скидку 10%</span> на следующий полет, если вернешься</p><div class="special__price"><div class="special__price-old">250 000 $</div><div class="special__price-now">225 000 $</div></div></div><button class="btn special__item-btn">Забронировать билет</button></div></div><div class="additional special__additional"><div class="additional__title">Дополнительные услуги</div><div class="additional__box"><div class="additional__info"><div class="additional__info-title">С Вами полетит профессильный фотограф</div><ul class="additional__list"><li class="additional__item"><p class="additional__item-text">20 фотографий в профессиональной обработкa</p></li><li class="additional__item"><p class="additional__item-text">фото книга</p></li><li class="additional__item"><p class="additional__item-text">магнит на холодильник в подарок</p></li></ul></div><div class="additional__group"><button class="btn additional__btn">КУПИТЬ УСЛУГИ ФОТОГРАФА</button><button class="btn additional__btn">ХОЧУ И ДИСК</button></div></div><div class="additional__subtitle">Стоимость фотосессии в невесомости 100 000 $.  Доплати 50 000 $ и получи все фото в цветокоррекции на диске.</div></div><div class="slider special__slider"><button class="slider__btn"><svg width="101" height="8" viewBox="0 0 101 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.646447 4.35355C0.451184 4.15829 0.451184 3.84171 0.646447 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646447 4.35355ZM101 4.5H1V3.5H101V4.5Z" fill="white"/>
-</svg>
-</button><div class="slider__content"><div class="slider__content-item"><img class="slider__content-img" src="images/special_crew.png"/></div></div><button class="slider__btn slider__btn_type_right"><svg width="101" height="8" viewBox="0 0 101 8" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M0.646447 4.35355C0.451184 4.15829 0.451184 3.84171 0.646447 3.64645L3.82843 0.464466C4.02369 0.269204 4.34027 0.269204 4.53553 0.464466C4.7308 0.659728 4.7308 0.976311 4.53553 1.17157L1.70711 4L4.53553 6.82843C4.7308 7.02369 4.7308 7.34027 4.53553 7.53553C4.34027 7.7308 4.02369 7.7308 3.82843 7.53553L0.646447 4.35355ZM101 4.5H1V3.5H101V4.5Z" fill="white"/>
-</svg>
-</button></div><p class="special__subtitle">Ты знаешь о Космическом законе – представь себе то, что ты хочешь, и оно войдет в твою жизнь.</p></div></div></section><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="scripts/slick.min.js"></script><script src="scripts/jquery.fancybox.min.js"></script><script src="scripts/main.js"></script><script>function windowWidth() {
+        p.booking__description-text Virgin Galactic получила задатков более чем 80 млн долл, а количество желающих превышает 600 человек.--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!--section.page.special.container
+    .page__title Спец. предложения
+    .special__inner
+        .special__list
+            .special__item
+                .special__item-info
+                    p.special__item-text Забронируй полет <span>прямо сейчас</span> и получи скидку 1000$
+                    .special__price
+                        .special__price-old 250 000 $
+                        .special__price-now 249 000 $
+                button.btn.special__item-btn Забронировать билет
+            .special__item
+                .special__item-info
+                    p.special__item-text Приведи друга и получи <span>скидку 10%</span> на следующий полет, если вернешься
+                    .special__price
+                        .special__price-old 250 000 $
+                        .special__price-now 225 000 $
+
+                button.btn.special__item-btn Забронировать билет
+        .additional.special__additional
+            .additional__title Дополнительные услуги
+            .additional__box
+                .additional__info
+                    .additional__info-title С Вами полетит профессильный фотограф
+                    ul.additional__list
+                        li.additional__item
+                            p.additional__item-text 20 фотографий в профессиональной обработкa
+                        li.additional__item
+                            p.additional__item-text фото книга
+                        li.additional__item
+                            p.additional__item-text магнит на холодильник в подарок
+                .additional__group
+                    button.btn.additional__btn КУПИТЬ УСЛУГИ ФОТОГРАФА
+                    button.btn.additional__btn ХОЧУ И ДИСК
+            .additional__subtitle Стоимость фотосессии в невесомости 100 000 $.  Доплати 50 000 $ и получи все фото в цветокоррекции на диске.
+        .slider.special__slider
+            button.slider__btn
+                include images/slider-arrow.svg
+            .slider__content
+                .slider__content-item
+                    img.slider__content-img(src="images/special_crew.png")
+            button.slider__btn.slider__btn_type_right
+                include images/slider-arrow.svg
+        p.special__subtitle Ты знаешь о Космическом законе – представь себе то, что ты хочешь, и оно войдет в твою жизнь.--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><section class="page contacts"><div class="container"><div class="contacts__inner"><div class="contacts__inner-top"><div class="contacts__box"><h3 class="contacts__box-title">контакты</h3><p class="contacts__box-text">Оставь свои контакты и мы перезвоним тебе в ближайшие 100 лет!</p></div><div class="contacts__box"><h3 class="contacts__box-title">гарантии</h3><p class="contacts__box-text">Ни одна моя ракета еще не сделала удачную попытку, потому что в ней не было тебя! Будь первым! Колонизируй Марс! Илон Маск</p></div></div><div class="contacts__inner-bottom"><form class="contacts__form"><input class="input contacts__input" placeholder="ФИО"/><input class="input contacts__input" placeholder="Имя ребенка или внука (на всякий случай)"/><input class="input contacts__input" placeholder="Телефон"/><button class="btn contacts__form-btn">Забронировать полет</button></form><img class="contacts__img" src="images/contacts_ilon-mask.png"/></div></div></div></section><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><footer class="footer"><div class="container"><div class="footer__inner"><div class="footer__description"><p class="footer__description-text">Служба поддержки работает межгалактично и суборбитально</p><p class="footer__description-text">График приема посетителей строго по записи</p></div><ul class="footer__list"><li class="footer__item"><a class="footer__item-link" href="#">о нас</a></li><li class="footer__item"><a class="footer__item-link" href="#">стоимость</a></li><li class="footer__item"><a class="footer__item-link" href="#">доп.услуги</a></li><li class="footer__item"><a class="footer__item-link" href="#">гарантии</a></li><li class="footer__item"><a class="footer__item-link" href="#">новости</a></li></ul><ul class="footer__list"><li class="footer__item"><a class="footer__item-link" href="spacex.com">spacex.com</a></li><li class="footer__item"><a class="footer__item-link" href="blueorigin.com">blueorigin.com</a></li><li class="footer__item"><a class="footer__item-link" href="virgingalactic.com">virgingalactic.com</a></li><li class="footer__item footer__item_color_red"><a class="footer__item-link" href="tel:080000000000">0 800 000 000 00</a></li><li class="footer__item"><a class="footer__item-link" href="#">мкс</a></li></ul></div></div></footer><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="scripts/slick.min.js"></script><script src="scripts/jquery.fancybox.min.js"></script><script src="scripts/main.js"></script><script>function windowWidth() {
     const element = document.createElement('div')
     element.innerText = `${innerWidth}px/${innerHeight}px`
     element.style.position = "fixed"
