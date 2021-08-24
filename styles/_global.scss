@@ -357,7 +357,16 @@ body {
     }
 
     &__group {
+        position: relative;
         flex: 1;
+
+        &::before {
+            content: url('images/special_cosmonaut.png');
+
+            position: absolute;
+            right: 0;
+            top: -129px;
+        }
     }
 
     &__btn {

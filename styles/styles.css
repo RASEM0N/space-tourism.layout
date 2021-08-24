@@ -276,7 +276,14 @@ body {
   line-height: 29px;
 }
 .additional__group {
+  position: relative;
   flex: 1;
+}
+.additional__group::before {
+  content: url("images/special_cosmonaut.png");
+  position: absolute;
+  right: 0;
+  top: -129px;
 }
 .additional__btn {
   display: block;

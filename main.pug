@@ -1,34 +1,34 @@
 // ---- --- --- MIXINS --- --- --- ---
 mixin tableElement(title, count, unit)
     .table__item
-        .table__title=title
+        h5.table__title=title
         .table__info
             .table__info-count=count
             .table__info-unit=unit
 mixin star(text)
     .constellation__star
         .constellation__star-circle
-        .constellation__star-text=text
+        p.constellation__star-text=text
 
 
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
 main#fullpage
-    header.page.header
+    header#header.page.header
         .container
             .header__inner
                 .header__top
                     nav.menu.header__menu
                         ul.menu__list
                             li.menu__item.menu__item_actived
-                                a(href="#").menu__link О нас
+                                a(href="#about-us").menu__link О нас
                             li.menu__item
-                                a(href="#").menu__link Стоимость
+                                a(href="#special").menu__link Стоимость
                             li.menu__item
-                                a(href="#").menu__link Доп. услуги
+                                a(href="#additional").menu__link Доп. услуги
                             li.menu__item
-                                a(href="#").menu__link Гарантии
+                                a(href="#contacts").menu__link Гарантии
                             li.menu__item
                                 a(href="#").menu__link Новости
 
@@ -48,7 +48,7 @@ main#fullpage
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
-    section.page.about-us
+    section#about-us.page.about-us
         .container
             h3.page__title О нас
             .about-us__inner
@@ -78,7 +78,7 @@ main#fullpage
                         img(src="images/us_blue-origin.png")
                     .about-us__box-content
                         h4.about-us__box-title Blue Origin
-                        .about-us__box-path суборбитальный полет
+                        p.about-us__box-path суборбитальный полет
                         .about-us__box-description
                             p.about-us__box-text
                                 | Суборбитальные ракета New Shepard компании Blue Origin 20 июля 2021года впервые в истории компании вывела на космическую высоту капсулу с людьми, с самым богатым человеком мира Джеффом Безосом на борту.
@@ -121,9 +121,9 @@ main#fullpage
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
-    section.page.how
+    section#how.page.how
         .container
-            .page__title Как все происходит
+            h3.page__title Как все происходит
             .how__inner
                 .constellation.how__constellation
                     +star("Выбираем программу")
@@ -136,16 +136,16 @@ main#fullpage
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
-    section.page.booking
+    section#booking.page.booking
         .container.booking__container
-            .page__title Успей забронировать!
+            h3.page__title Успей забронировать!
             .booking__description
                 p.booking__description-text Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года. Компания уже несколько лет продает билеты на такие полеты по 250 тыс долл.
                 p.booking__description-text Virgin Galactic получила задатков более чем 80 млн долл, а количество желающих превышает 600 человек.
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
-    section.page.special
+    section#special.page.special
         .container
             .page__title Спец. предложения
             .special__inner
@@ -165,7 +165,7 @@ main#fullpage
                                 .special__price-now 225 000 $
 
                         button.btn.special__item-btn Забронировать билет
-                .additional.special__additional
+                #additional.additional.special__additional
                     .additional__title Дополнительные услуги
                     .additional__box
                         .additional__info
@@ -180,7 +180,7 @@ main#fullpage
                         .additional__group
                             button.btn.additional__btn КУПИТЬ УСЛУГИ ФОТОГРАФА
                             button.btn.additional__btn ХОЧУ И ДИСК
-                    .additional__subtitle Стоимость фотосессии в невесомости 100 000 $.  Доплати 50 000 $ и получи все фото в цветокоррекции на диске.
+                    p.additional__subtitle Стоимость фотосессии в невесомости 100 000 $.  Доплати 50 000 $ и получи все фото в цветокоррекции на диске.
                 .slider.special__slider
                     button.slider__btn
                         include images/slider-arrow.svg
@@ -193,7 +193,7 @@ main#fullpage
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
-    section.page.contacts
+    section#contacts.page.contacts
         .container
             .contacts__inner
                 .contacts__inner-top
@@ -213,7 +213,7 @@ main#fullpage
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
     // --- --- --- --- --- --- --- --- ---
-    footer.footer
+    footer#footer.footer
         .container
             .footer__inner
                 .footer__description
