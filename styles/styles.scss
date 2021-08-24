@@ -236,3 +236,34 @@
         width: 50%;
     }
 }
+
+.how {
+    background-image: url('images/how_bg.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    position: relative;
+
+    &::before {
+        content: '';
+
+        background: linear-gradient(180deg, #010203 0%, rgba(1, 2, 3, 0) 100%);
+
+        transform: rotate(-180deg);
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        top: 63%;
+    }
+
+    &__inner {
+        position: relative;
+        z-index: 10;
+    }
+
+    &__constellation {
+        margin: 0 auto;
+    }
+}

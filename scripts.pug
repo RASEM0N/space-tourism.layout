@@ -5,7 +5,7 @@ script(src="scripts/main.js")
 script.
     function windowWidth() {
         const element = document.createElement('div')
-        element.innerText = window.innerWidth + 'px'
+        element.innerText = `${innerWidth}px/${innerHeight}px`
         element.style.position = "fixed"
         element.style.top = "30px"
         element.style.right = "30px"
@@ -18,7 +18,7 @@ script.
         document.body.append(element)
 
         window.addEventListener('resize', () => {
-            element.innerText = window.innerWidth + 'px'
+            element.innerText = `${innerWidth}px/${innerHeight}px`
         })
     }
 

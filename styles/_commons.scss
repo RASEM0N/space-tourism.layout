@@ -30,3 +30,174 @@
 
 .login {
 }
+
+.constellation {
+    position: relative;
+
+    width: 843px;
+    height: 603px;
+
+    &__star {
+        position: absolute;
+        display: flex;
+
+        //&:hover {
+        //    .constellation__star-circle {
+        //        transform: scale(2);
+        //
+        //        margin-right: 25px;
+        //    }
+        //
+        //    .constellation__star-text {
+        //        font-size: 36px;
+        //        color: #036cca;
+        //    }
+        //}
+    }
+
+    &__star-circle {
+        background-color: #ffffff;
+        border-radius: 50%;
+
+        transition: all 0.3s ease;
+
+        margin-right: 15px;
+
+        width: 20px;
+        height: 20px;
+    }
+
+    &__star-text {
+        font-size: 18px;
+        line-height: 21px;
+
+        transition: all 0.3s ease;
+    }
+
+    &__star {
+        &::after {
+            content: '';
+
+            background-color: white;
+
+            position: absolute;
+            z-index: 0;
+
+            height: 2px;
+        }
+
+        &:nth-of-type(1) {
+            top: 0;
+            left: 0;
+
+            &::after {
+                transform: rotate(29.66deg);
+                top: 48px;
+                left: 0;
+
+                width: 159px;
+            }
+        }
+
+        &:nth-of-type(2) {
+            top: 77px;
+            left: 141px;
+
+            &::after {
+                transform: rotate(59.31deg);
+                top: 58px;
+                left: -20px;
+
+                width: 121px;
+            }
+        }
+
+        &:nth-of-type(3) {
+            top: 178px;
+            left: 205px;
+
+            &::after {
+                transform: rotate(59.31deg);
+                top: 80px;
+                left: -20px;
+
+                width: 140px;
+            }
+        }
+
+        &:nth-of-type(4) {
+            left: 276px;
+            bottom: 275px;
+
+            &::after {
+                transform: rotate(25deg);
+                top: 70px;
+                left: -6px;
+
+                width: 296px;
+            }
+        }
+
+        &:nth-of-type(5) {
+            top: 426px;
+            left: 536px;
+
+            .constellation__star-circle {
+                width: 60px;
+            }
+
+            &::after {
+                transform: rotate(324deg);
+                top: 63px;
+                left: -146px;
+
+                width: 170px;
+            }
+        }
+
+        &:nth-of-type(6) {
+            display: block;
+            top: 526px;
+            left: 396px;
+
+            .constellation__star-text {
+                margin-top: 15px;
+            }
+
+            //&:hover {
+            //    .constellation__star-text {
+            //        margin-top: 25px;
+            //    }
+            //}
+
+            &::after {
+                transform: rotate(35.44deg);
+                top: -52px;
+                left: -185px;
+
+                width: 215px;
+            }
+        }
+
+        &:nth-of-type(7) {
+            left: 5px;
+            bottom: 176px;
+
+            .constellation__star-circle {
+                margin: 0 0 0 15px;
+            }
+
+            .constellation__star-text {
+                order: -1;
+            }
+
+            &::after {
+                transform: rotate(117.27deg);
+                top: -40px;
+                left: 199px;
+
+                width: 115px;
+            }
+        }
+    }
+}

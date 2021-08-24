@@ -69,6 +69,7 @@ body {
   position: relative;
   z-index: 10;
   margin-bottom: 100px;
+  max-width: 576px;
 }
 
 .container {
@@ -139,6 +140,119 @@ body {
 .phone {
   font-size: 24px;
   line-height: 29px;
+}
+
+.constellation {
+  position: relative;
+  width: 843px;
+  height: 603px;
+}
+.constellation__star {
+  position: absolute;
+  display: flex;
+}
+.constellation__star-circle {
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+.constellation__star-text {
+  font-size: 18px;
+  line-height: 21px;
+  transition: all 0.3s ease;
+}
+.constellation__star::after {
+  content: "";
+  background-color: white;
+  position: absolute;
+  z-index: 0;
+  height: 2px;
+}
+.constellation__star:nth-of-type(1) {
+  top: 0;
+  left: 0;
+}
+.constellation__star:nth-of-type(1)::after {
+  transform: rotate(29.66deg);
+  top: 48px;
+  left: 0;
+  width: 159px;
+}
+.constellation__star:nth-of-type(2) {
+  top: 77px;
+  left: 141px;
+}
+.constellation__star:nth-of-type(2)::after {
+  transform: rotate(59.31deg);
+  top: 58px;
+  left: -20px;
+  width: 121px;
+}
+.constellation__star:nth-of-type(3) {
+  top: 178px;
+  left: 205px;
+}
+.constellation__star:nth-of-type(3)::after {
+  transform: rotate(59.31deg);
+  top: 80px;
+  left: -20px;
+  width: 140px;
+}
+.constellation__star:nth-of-type(4) {
+  left: 276px;
+  bottom: 275px;
+}
+.constellation__star:nth-of-type(4)::after {
+  transform: rotate(25deg);
+  top: 70px;
+  left: -6px;
+  width: 296px;
+}
+.constellation__star:nth-of-type(5) {
+  top: 426px;
+  left: 536px;
+}
+.constellation__star:nth-of-type(5) .constellation__star-circle {
+  width: 60px;
+}
+.constellation__star:nth-of-type(5)::after {
+  transform: rotate(324deg);
+  top: 63px;
+  left: -146px;
+  width: 170px;
+}
+.constellation__star:nth-of-type(6) {
+  display: block;
+  top: 526px;
+  left: 396px;
+}
+.constellation__star:nth-of-type(6) .constellation__star-text {
+  margin-top: 15px;
+}
+.constellation__star:nth-of-type(6)::after {
+  transform: rotate(35.44deg);
+  top: -52px;
+  left: -185px;
+  width: 215px;
+}
+.constellation__star:nth-of-type(7) {
+  left: 5px;
+  bottom: 176px;
+}
+.constellation__star:nth-of-type(7) .constellation__star-circle {
+  margin: 0 0 0 15px;
+}
+.constellation__star:nth-of-type(7) .constellation__star-text {
+  order: -1;
+}
+.constellation__star:nth-of-type(7)::after {
+  transform: rotate(117.27deg);
+  top: -40px;
+  left: 199px;
+  width: 115px;
 }
 
 .header {
@@ -302,6 +416,31 @@ body {
   width: 50%;
 }
 
+.how {
+  background-image: url("images/how_bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.how::before {
+  content: "";
+  background: linear-gradient(180deg, #010203 0%, rgba(1, 2, 3, 0) 100%);
+  transform: rotate(-180deg);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 63%;
+}
+.how__inner {
+  position: relative;
+  z-index: 10;
+}
+.how__constellation {
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=styles.css.map */
 </style><body><!-- ---- --- --- MIXINS --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!--header.page.header.container
     .header__inner
@@ -331,11 +470,77 @@ body {
             button.header__btn Хочу быть космонавтом
         .header__description
             p.header__description-text В 2021 году наступила новая эра в освоении космоса - эра космического туризма. Частные компании получили доступ к космическому пространству.
-            p.header__description-text Между ними обострилась конкуренция, а цена билета на полеты в космическое пространство снизилась в сто раз.--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><section class="page about-us"><div class="container"><h3 class="page__title">О нас</h3><div class="about-us__inner"><div class="about-us__box"><div class="about-us__box-img"><img src="images/us_virgin-galactic.png"/></div><div class="about-us__box-content"><h4 class="about-us__box-title">Virgin Galactic</h4><div class="about-us__box-path">суборбитальный полет</div><div class="about-us__box-description"><p class="about-us__box-text">Компания Virgin Galactic 11 июля 2021 осуществила первый "туристический" суборбитальный полет со своим основателем, британским миллиардером Ричардом Брэнсоном на борту.</p><p class="about-us__box-text">Корабль "Unity 22" стартовал с космического порта "Америка" в штате Нью-Мексико с помощью самолета-носителя VMS Eve. Позже он отсоединился от самолета-носителя.</p><p class="about-us__box-text">Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года.</p></div><div class="table about-us__table"><div class="table__list"><div class="table__item"><div class="table__title">время в пути</div><div class="table__info"><div class="table__info-count">1</div><div class="table__info-unit">час</div></div></div><div class="table__item"><div class="table__title">расстояние</div><div class="table__info"><div class="table__info-count">80</div><div class="table__info-unit">км</div></div></div><div class="table__item"><div class="table__title">в невесомости</div><div class="table__info"><div class="table__info-count">4-5</div><div class="table__info-unit">мин</div></div></div><div class="table__item"><div class="table__title">стоимость</div><div class="table__info"><div class="table__info-count">250</div><div class="table__info-unit">тыс.дол</div></div></div><div class="table__item"><div class="table__title">вернешься?</div><div class="table__info"><div class="table__info-count">99</div><div class="table__info-unit">%</div></div></div></div></div><button class="about-us__box-btn">Забронировать полет</button></div></div><div class="about-us__box about-us__box_type_reverse"><div class="about-us__box-img"><img src="images/us_blue-origin.png"/></div><div class="about-us__box-content"><h4 class="about-us__box-title">Blue Origin</h4><div class="about-us__box-path">суборбитальный полет</div><div class="about-us__box-description"><p class="about-us__box-text">Суборбитальные ракета New Shepard компании Blue Origin 20 июля 2021года впервые в истории компании вывела на космическую высоту капсулу с людьми, с самым богатым человеком мира Джеффом  Безосом на борту.</p><p class="about-us__box-text">New Shepard высотой 18 м и шириной 4 м - многоразовый космический аппарат. Бустерная установка поднимает герметичное пассажирское судно на высоту около 76 км. Импульс преподносит капсулу вверх в космос.</p><p class="about-us__box-text">После этого она опускается на землю под тремя парашютами. Ракета-носитель тоже возвращается домой.</p></div><div class="table about-us__table"><div class="table__list"><div class="table__item"><div class="table__title">время в пути</div><div class="table__info"><div class="table__info-count">10</div><div class="table__info-unit">мин</div></div></div><div class="table__item"><div class="table__title">расстояние</div><div class="table__info"><div class="table__info-count">100</div><div class="table__info-unit">км</div></div></div><div class="table__item"><div class="table__title">в невесомости</div><div class="table__info"><div class="table__info-count">4-5</div><div class="table__info-unit">мин</div></div></div><div class="table__item"><div class="table__title">стоимость</div><div class="table__info"><div class="table__info-count">250</div><div class="table__info-unit">тыс.дол</div></div></div><div class="table__item"><div class="table__title">вернешься?</div><div class="table__info"><div class="table__info-count">99</div><div class="table__info-unit">%</div></div></div></div><div class="table__extra">стоимость 200-250 тыс. дол. по четным/нечетным или как повезет</div></div><button class="about-us__box-btn">Забронировать полет</button></div></div><div class="about-us__box"><div class="about-us__box-img"><img src="images/us_spacex.png"/></div><div class="about-us__box-content"><h4 class="about-us__box-title">SpaceX</h4><div class="about-us__box-path">А может на Луну или Марс?</div><div class="about-us__box-description"><p class="about-us__box-text">В 2016 году на 67-м ежегодном Международном конгрессе астронавтики Илон Маск заявил, что оптимистичный временной график предусматривает первый полет к Марсу в 2022 году (доставка груза).</p><p class="about-us__box-text">Полет с экипажем - в 2024 году.
-На Красную планету экипаж прибудет в 2025-26 году.
-"Я начал SpaceX, потому что хотел помочь снизить стоимость космических перевозок, чтобы основать жизни на другой планете".</p><p class="about-us__box-text">Если все пойдет по плану, то благодаря Маск к 2050 году жителями Красной планеты смогут себя назвать около миллиона человек. Туда их доставит флотилия из тысячи кораблей Starship.</p></div><div class="table about-us__table"><div class="table__list"><div class="table__item"><div class="table__title">время в пути</div><div class="table__info"><div class="table__info-count">150</div><div class="table__info-unit">дней</div></div></div><div class="table__item"><div class="table__title">расстояние</div><div class="table__info"><div class="table__info-count">55</div><div class="table__info-unit">млн.км</div></div></div><div class="table__item"><div class="table__title">в невесомости</div><div class="table__info"><div class="table__info-count">много</div><div class="table__info-unit">мин</div></div></div><div class="table__item"><div class="table__title">стоимость</div><div class="table__info"><div class="table__info-count">10</div><div class="table__info-unit">млн.дол</div></div></div><div class="table__item"><div class="table__title">вернешься?</div><div class="table__info"><div class="table__info-count">1</div><div class="table__info-unit">%</div></div></div></div></div><button class="about-us__box-btn">Забронировать полет</button></div></div></div></div></section><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="scripts/slick.min.js"></script><script src="scripts/jquery.fancybox.min.js"></script><script src="scripts/main.js"></script><script>function windowWidth() {
+            p.header__description-text Между ними обострилась конкуренция, а цена билета на полеты в космическое пространство снизилась в сто раз.--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!--section.page.about-us.container
+    h3.page__title О нас
+    .about-us__inner
+        .about-us__box
+            .about-us__box-img
+                img(src="images/us_virgin-galactic.png")
+            .about-us__box-content
+                h4.about-us__box-title Virgin Galactic
+                .about-us__box-path суборбитальный полет
+                .about-us__box-description
+                    p.about-us__box-text
+                        | Компания Virgin Galactic 11 июля 2021 осуществила первый "туристический" суборбитальный полет со своим основателем, британским миллиардером Ричардом Брэнсоном на борту.
+                    p.about-us__box-text
+                        | Корабль "Unity 22" стартовал с космического порта "Америка" в штате Нью-Мексико с помощью самолета-носителя VMS Eve. Позже он отсоединился от самолета-носителя.
+                    p.about-us__box-text
+                        | Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года.
+                .table.about-us__table
+                    .table__list
+                        +tableElement("время в пути", "1", "час")
+                        +tableElement("расстояние", "80", "км")
+                        +tableElement("в невесомости", "4-5", "мин")
+                        +tableElement("стоимость", "250", "тыс.дол")
+                        +tableElement("вернешься?", "99", "%")
+                button.about-us__box-btn Забронировать полет
+        .about-us__box.about-us__box_type_reverse
+            .about-us__box-img
+                img(src="images/us_blue-origin.png")
+            .about-us__box-content
+                h4.about-us__box-title Blue Origin
+                .about-us__box-path суборбитальный полет
+                .about-us__box-description
+                    p.about-us__box-text
+                        | Суборбитальные ракета New Shepard компании Blue Origin 20 июля 2021года впервые в истории компании вывела на космическую высоту капсулу с людьми, с самым богатым человеком мира Джеффом Безосом на борту.
+                    p.about-us__box-text
+                        | New Shepard высотой 18 м и шириной 4 м - многоразовый космический аппарат. Бустерная установка поднимает герметичное пассажирское судно на высоту около 76 км. Импульс преподносит капсулу вверх в космос.
+                    p.about-us__box-text
+                        | После этого она опускается на землю под тремя парашютами. Ракета-носитель тоже возвращается домой.
+                .table.about-us__table
+                    .table__list
+                        +tableElement("время в пути", "10", "мин")
+                        +tableElement("расстояние", "100", "км")
+                        +tableElement("в невесомости", "4-5", "мин")
+                        +tableElement("стоимость", "250", "тыс.дол")
+                        +tableElement("вернешься?", "99", "%")
+                    .table__extra стоимость 200-250 тыс. дол. по четным/нечетным или как повезет
+                button.about-us__box-btn Забронировать полет
+        .about-us__box
+            .about-us__box-img
+                img(src="images/us_spacex.png")
+            .about-us__box-content
+                h4.about-us__box-title SpaceX
+                .about-us__box-path А может на Луну или Марс?
+                .about-us__box-description
+                    p.about-us__box-text
+                        | В 2016 году на 67-м ежегодном Международном конгрессе астронавтики Илон Маск заявил, что оптимистичный временной график предусматривает первый полет к Марсу в 2022 году (доставка груза).
+                    p.about-us__box-text
+                        | Полет с экипажем - в 2024 году.
+                        | На Красную планету экипаж прибудет в 2025-26 году.
+                        | "Я начал SpaceX, потому что хотел помочь снизить стоимость космических перевозок, чтобы основать жизни на другой планете".
+                    p.about-us__box-text
+                        | Если все пойдет по плану, то благодаря Маск к 2050 году жителями Красной планеты смогут себя назвать около миллиона человек. Туда их доставит флотилия из тысячи кораблей Starship.
+                .table.about-us__table
+                    .table__list
+                        +tableElement("время в пути", "150", "дней")
+                        +tableElement("расстояние", "55", "млн.км")
+                        +tableElement("в невесомости", "много", "мин")
+                        +tableElement("стоимость", "10", "млн.дол")
+                        +tableElement("вернешься?", "1", "%")
+                button.about-us__box-btn Забронировать полет--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><section class="page how"><div class="container"><div class="page__title">Как все происходит</div><div class="how__inner"><div class="constellation how__constellation"><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Выбираем программу</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Оплачиваете</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Какая-то будет подготовка</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Садимся. Летим. Невесомость.</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Едим из тюбиков: 5 видов меню на выбор (веган, спорт,) безлактозное, безглютеновое, обычное</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Приземляемся, но это не точно</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Делаем фото в инстаграм</div></div></div></div></div></section><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="scripts/slick.min.js"></script><script src="scripts/jquery.fancybox.min.js"></script><script src="scripts/main.js"></script><script>function windowWidth() {
     const element = document.createElement('div')
-    element.innerText = window.innerWidth + 'px'
+    element.innerText = `${innerWidth}px/${innerHeight}px`
     element.style.position = "fixed"
     element.style.top = "30px"
     element.style.right = "30px"
@@ -348,7 +553,7 @@ body {
     document.body.append(element)
 
     window.addEventListener('resize', () => {
-        element.innerText = window.innerWidth + 'px'
+        element.innerText = `${innerWidth}px/${innerHeight}px`
     })
 }
 

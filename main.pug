@@ -5,6 +5,11 @@ mixin tableElement(title, count, unit)
         .table__info
             .table__info-count=count
             .table__info-unit=unit
+mixin star(text)
+    .constellation__star
+        .constellation__star-circle
+        .constellation__star-text=text
+
 
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
@@ -42,7 +47,7 @@ mixin tableElement(title, count, unit)
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
-section.page.about-us
+//section.page.about-us
     .container
         h3.page__title О нас
         .about-us__inner
@@ -75,7 +80,7 @@ section.page.about-us
                     .about-us__box-path суборбитальный полет
                     .about-us__box-description
                         p.about-us__box-text
-                            | Суборбитальные ракета New Shepard компании Blue Origin 20 июля 2021года впервые в истории компании вывела на космическую высоту капсулу с людьми, с самым богатым человеком мира Джеффом  Безосом на борту.
+                            | Суборбитальные ракета New Shepard компании Blue Origin 20 июля 2021года впервые в истории компании вывела на космическую высоту капсулу с людьми, с самым богатым человеком мира Джеффом Безосом на борту.
                         p.about-us__box-text
                             | New Shepard высотой 18 м и шириной 4 м - многоразовый космический аппарат. Бустерная установка поднимает герметичное пассажирское судно на высоту около 76 км. Импульс преподносит капсулу вверх в космос.
                         p.about-us__box-text
@@ -112,6 +117,21 @@ section.page.about-us
                             +tableElement("стоимость", "10", "млн.дол")
                             +tableElement("вернешься?", "1", "%")
                     button.about-us__box-btn Забронировать полет
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+section.page.how
+    .container
+        .page__title Как все происходит
+        .how__inner
+            .constellation.how__constellation
+                +star("Выбираем программу")
+                +star("Оплачиваете")
+                +star("Какая-то будет подготовка")
+                +star("Садимся. Летим. Невесомость.")
+                +star("Едим из тюбиков: 5 видов меню на выбор (веган, спорт,) безлактозное, безглютеновое, обычное")
+                +star("Приземляемся, но это не точно")
+                +star("Делаем фото в инстаграм")
 
 
 
