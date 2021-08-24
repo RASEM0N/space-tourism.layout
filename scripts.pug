@@ -1,25 +1,7 @@
 script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
 script(src="scripts/slick.min.js")
-script(src="scripts/jquery.fancybox.min.js")
+//script(src="scripts/jquery.fancybox.min.js")
+script(src="scripts/fullpage.min.js")
 script(src="scripts/main.js")
 script.
-    function windowWidth() {
-        const element = document.createElement('div')
-        element.innerText = `${innerWidth}px/${innerHeight}px`
-        element.style.position = "fixed"
-        element.style.top = "30px"
-        element.style.right = "30px"
-        element.style.zIndex = 11
-        element.style.fontFamily = "SF Display Pro"
-        element.style.fontWeight = "bold"
-        element.style.fontSize = 24
-        element.style.color = '#ffffff'
 
-        document.body.append(element)
-
-        window.addEventListener('resize', () => {
-            element.innerText = `${innerWidth}px/${innerHeight}px`
-        })
-    }
-
-    windowWidth()

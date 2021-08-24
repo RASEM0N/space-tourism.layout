@@ -14,229 +14,230 @@ mixin star(text)
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
-//header.page.header
-    .container
-        .header__inner
-            .header__top
-                nav.menu.header__menu
-                    ul.menu__list
-                        li.menu__item.menu__item_actived
-                            a(href="#").menu__link О нас
-                        li.menu__item
-                            a(href="#").menu__link Стоимость
-                        li.menu__item
-                            a(href="#").menu__link Доп. услуги
-                        li.menu__item
-                            a(href="#").menu__link Гарантии
-                        li.menu__item
-                            a(href="#").menu__link Новости
+main#fullpage
+    header.page.header
+        .container
+            .header__inner
+                .header__top
+                    nav.menu.header__menu
+                        ul.menu__list
+                            li.menu__item.menu__item_actived
+                                a(href="#").menu__link О нас
+                            li.menu__item
+                                a(href="#").menu__link Стоимость
+                            li.menu__item
+                                a(href="#").menu__link Доп. услуги
+                            li.menu__item
+                                a(href="#").menu__link Гарантии
+                            li.menu__item
+                                a(href="#").menu__link Новости
 
-                a.phone.header__phone(href="tel:080000000000") 0 800 000 000 00
-                button.login.header__login
-                    img.login__img(src="images/header_cosmonaut.png")
+                    a.phone.header__phone(href="tel:080000000000") 0 800 000 000 00
+                    button.login.header__login
+                        img.login__img(src="images/header_cosmonaut.png")
 
-            .header__content
-                h1.header__title Космический <span>Туризм</span>
-                .header__text
-                    p Будущие уже наступило!
-                    p Осуществим мечту детства!
-                button.header__btn Хочу быть космонавтом
-            .header__description
-                p.header__description-text В 2021 году наступила новая эра в освоении космоса - эра космического туризма. Частные компании получили доступ к космическому пространству.
-                p.header__description-text Между ними обострилась конкуренция, а цена билета на полеты в космическое пространство снизилась в сто раз.
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-//section.page.about-us
-    .container
-        h3.page__title О нас
-        .about-us__inner
-            .about-us__box
-                .about-us__box-img
-                    img(src="images/us_virgin-galactic.png")
-                .about-us__box-content
-                    h4.about-us__box-title Virgin Galactic
-                    .about-us__box-path суборбитальный полет
-                    .about-us__box-description
-                        p.about-us__box-text
-                            | Компания Virgin Galactic 11 июля 2021 осуществила первый "туристический" суборбитальный полет со своим основателем, британским миллиардером Ричардом Брэнсоном на борту.
-                        p.about-us__box-text
-                            | Корабль "Unity 22" стартовал с космического порта "Америка" в штате Нью-Мексико с помощью самолета-носителя VMS Eve. Позже он отсоединился от самолета-носителя.
-                        p.about-us__box-text
-                            | Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года.
-                    .table.about-us__table
-                        .table__list
-                            +tableElement("время в пути", "1", "час")
-                            +tableElement("расстояние", "80", "км")
-                            +tableElement("в невесомости", "4-5", "мин")
-                            +tableElement("стоимость", "250", "тыс.дол")
-                            +tableElement("вернешься?", "99", "%")
-                    button.about-us__box-btn Забронировать полет
-            .about-us__box.about-us__box_type_reverse
-                .about-us__box-img
-                    img(src="images/us_blue-origin.png")
-                .about-us__box-content
-                    h4.about-us__box-title Blue Origin
-                    .about-us__box-path суборбитальный полет
-                    .about-us__box-description
-                        p.about-us__box-text
-                            | Суборбитальные ракета New Shepard компании Blue Origin 20 июля 2021года впервые в истории компании вывела на космическую высоту капсулу с людьми, с самым богатым человеком мира Джеффом Безосом на борту.
-                        p.about-us__box-text
-                            | New Shepard высотой 18 м и шириной 4 м - многоразовый космический аппарат. Бустерная установка поднимает герметичное пассажирское судно на высоту около 76 км. Импульс преподносит капсулу вверх в космос.
-                        p.about-us__box-text
-                            | После этого она опускается на землю под тремя парашютами. Ракета-носитель тоже возвращается домой.
-                    .table.about-us__table
-                        .table__list
-                            +tableElement("время в пути", "10", "мин")
-                            +tableElement("расстояние", "100", "км")
-                            +tableElement("в невесомости", "4-5", "мин")
-                            +tableElement("стоимость", "250", "тыс.дол")
-                            +tableElement("вернешься?", "99", "%")
-                        .table__extra стоимость 200-250 тыс. дол. по четным/нечетным или как повезет
-                    button.about-us__box-btn Забронировать полет
-            .about-us__box
-                .about-us__box-img
-                    img(src="images/us_spacex.png")
-                .about-us__box-content
-                    h4.about-us__box-title SpaceX
-                    .about-us__box-path А может на Луну или Марс?
-                    .about-us__box-description
-                        p.about-us__box-text
-                            | В 2016 году на 67-м ежегодном Международном конгрессе астронавтики Илон Маск заявил, что оптимистичный временной график предусматривает первый полет к Марсу в 2022 году (доставка груза).
-                        p.about-us__box-text
-                            | Полет с экипажем - в 2024 году.
-                            | На Красную планету экипаж прибудет в 2025-26 году.
-                            | "Я начал SpaceX, потому что хотел помочь снизить стоимость космических перевозок, чтобы основать жизни на другой планете".
-                        p.about-us__box-text
-                            | Если все пойдет по плану, то благодаря Маск к 2050 году жителями Красной планеты смогут себя назвать около миллиона человек. Туда их доставит флотилия из тысячи кораблей Starship.
-                    .table.about-us__table
-                        .table__list
-                            +tableElement("время в пути", "150", "дней")
-                            +tableElement("расстояние", "55", "млн.км")
-                            +tableElement("в невесомости", "много", "мин")
-                            +tableElement("стоимость", "10", "млн.дол")
-                            +tableElement("вернешься?", "1", "%")
-                    button.about-us__box-btn Забронировать полет
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-//section.page.how
-    .container
-        .page__title Как все происходит
-        .how__inner
-            .constellation.how__constellation
-                +star("Выбираем программу")
-                +star("Оплачиваете")
-                +star("Какая-то будет подготовка")
-                +star("Садимся. Летим. Невесомость.")
-                +star("Едим из тюбиков: 5 видов меню на выбор (веган, спорт,) безлактозное, безглютеновое, обычное")
-                +star("Приземляемся, но это не точно")
-                +star("Делаем фото в инстаграм")
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-//section.page.booking
-    .container.booking__container
-        .page__title Успей забронировать!
-        .booking__description
-            p.booking__description-text Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года. Компания уже несколько лет продает билеты на такие полеты по 250 тыс долл.
-            p.booking__description-text Virgin Galactic получила задатков более чем 80 млн долл, а количество желающих превышает 600 человек.
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-//section.page.special
-    .container
-        .page__title Спец. предложения
-        .special__inner
-            .special__list
-                .special__item
-                    .special__item-info
-                        p.special__item-text Забронируй полет <span>прямо сейчас</span> и получи скидку 1000$
-                        .special__price
-                            .special__price-old 250 000 $
-                            .special__price-now 249 000 $
-                    button.btn.special__item-btn Забронировать билет
-                .special__item
-                    .special__item-info
-                        p.special__item-text Приведи друга и получи <span>скидку 10%</span> на следующий полет, если вернешься
-                        .special__price
-                            .special__price-old 250 000 $
-                            .special__price-now 225 000 $
+                .header__content
+                    h1.header__title Космический <span>Туризм</span>
+                    .header__text
+                        p Будущие уже наступило!
+                        p Осуществим мечту детства!
+                    button.header__btn Хочу быть космонавтом
+                .header__description
+                    p.header__description-text В 2021 году наступила новая эра в освоении космоса - эра космического туризма. Частные компании получили доступ к космическому пространству.
+                    p.header__description-text Между ними обострилась конкуренция, а цена билета на полеты в космическое пространство снизилась в сто раз.
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    section.page.about-us
+        .container
+            h3.page__title О нас
+            .about-us__inner
+                .about-us__box
+                    .about-us__box-img
+                        img(src="images/us_virgin-galactic.png")
+                    .about-us__box-content
+                        h4.about-us__box-title Virgin Galactic
+                        .about-us__box-path суборбитальный полет
+                        .about-us__box-description
+                            p.about-us__box-text
+                                | Компания Virgin Galactic 11 июля 2021 осуществила первый "туристический" суборбитальный полет со своим основателем, британским миллиардером Ричардом Брэнсоном на борту.
+                            p.about-us__box-text
+                                | Корабль "Unity 22" стартовал с космического порта "Америка" в штате Нью-Мексико с помощью самолета-носителя VMS Eve. Позже он отсоединился от самолета-носителя.
+                            p.about-us__box-text
+                                | Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года.
+                        .table.about-us__table
+                            .table__list
+                                +tableElement("время в пути", "1", "час")
+                                +tableElement("расстояние", "80", "км")
+                                +tableElement("в невесомости", "4-5", "мин")
+                                +tableElement("стоимость", "250", "тыс.дол")
+                                +tableElement("вернешься?", "99", "%")
+                        button.about-us__box-btn Забронировать полет
+                .about-us__box.about-us__box_type_reverse
+                    .about-us__box-img
+                        img(src="images/us_blue-origin.png")
+                    .about-us__box-content
+                        h4.about-us__box-title Blue Origin
+                        .about-us__box-path суборбитальный полет
+                        .about-us__box-description
+                            p.about-us__box-text
+                                | Суборбитальные ракета New Shepard компании Blue Origin 20 июля 2021года впервые в истории компании вывела на космическую высоту капсулу с людьми, с самым богатым человеком мира Джеффом Безосом на борту.
+                            p.about-us__box-text
+                                | New Shepard высотой 18 м и шириной 4 м - многоразовый космический аппарат. Бустерная установка поднимает герметичное пассажирское судно на высоту около 76 км. Импульс преподносит капсулу вверх в космос.
+                            p.about-us__box-text
+                                | После этого она опускается на землю под тремя парашютами. Ракета-носитель тоже возвращается домой.
+                        .table.about-us__table
+                            .table__list
+                                +tableElement("время в пути", "10", "мин")
+                                +tableElement("расстояние", "100", "км")
+                                +tableElement("в невесомости", "4-5", "мин")
+                                +tableElement("стоимость", "250", "тыс.дол")
+                                +tableElement("вернешься?", "99", "%")
+                            .table__extra стоимость 200-250 тыс. дол. по четным/нечетным или как повезет
+                        button.about-us__box-btn Забронировать полет
+                .about-us__box
+                    .about-us__box-img
+                        img(src="images/us_spacex.png")
+                    .about-us__box-content
+                        h4.about-us__box-title SpaceX
+                        .about-us__box-path А может на Луну или Марс?
+                        .about-us__box-description
+                            p.about-us__box-text
+                                | В 2016 году на 67-м ежегодном Международном конгрессе астронавтики Илон Маск заявил, что оптимистичный временной график предусматривает первый полет к Марсу в 2022 году (доставка груза).
+                            p.about-us__box-text
+                                | Полет с экипажем - в 2024 году.
+                                | На Красную планету экипаж прибудет в 2025-26 году.
+                                | "Я начал SpaceX, потому что хотел помочь снизить стоимость космических перевозок, чтобы основать жизни на другой планете".
+                            p.about-us__box-text
+                                | Если все пойдет по плану, то благодаря Маск к 2050 году жителями Красной планеты смогут себя назвать около миллиона человек. Туда их доставит флотилия из тысячи кораблей Starship.
+                        .table.about-us__table
+                            .table__list
+                                +tableElement("время в пути", "150", "дней")
+                                +tableElement("расстояние", "55", "млн.км")
+                                +tableElement("в невесомости", "много", "мин")
+                                +tableElement("стоимость", "10", "млн.дол")
+                                +tableElement("вернешься?", "1", "%")
+                        button.about-us__box-btn Забронировать полет
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    section.page.how
+        .container
+            .page__title Как все происходит
+            .how__inner
+                .constellation.how__constellation
+                    +star("Выбираем программу")
+                    +star("Оплачиваете")
+                    +star("Какая-то будет подготовка")
+                    +star("Садимся. Летим. Невесомость.")
+                    +star("Едим из тюбиков: 5 видов меню на выбор (веган, спорт,) безлактозное, безглютеновое, обычное")
+                    +star("Приземляемся, но это не точно")
+                    +star("Делаем фото в инстаграм")
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    section.page.booking
+        .container.booking__container
+            .page__title Успей забронировать!
+            .booking__description
+                p.booking__description-text Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года. Компания уже несколько лет продает билеты на такие полеты по 250 тыс долл.
+                p.booking__description-text Virgin Galactic получила задатков более чем 80 млн долл, а количество желающих превышает 600 человек.
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    section.page.special
+        .container
+            .page__title Спец. предложения
+            .special__inner
+                .special__list
+                    .special__item
+                        .special__item-info
+                            p.special__item-text Забронируй полет <span>прямо сейчас</span> и получи скидку 1000$
+                            .special__price
+                                .special__price-old 250 000 $
+                                .special__price-now 249 000 $
+                        button.btn.special__item-btn Забронировать билет
+                    .special__item
+                        .special__item-info
+                            p.special__item-text Приведи друга и получи <span>скидку 10%</span> на следующий полет, если вернешься
+                            .special__price
+                                .special__price-old 250 000 $
+                                .special__price-now 225 000 $
 
-                    button.btn.special__item-btn Забронировать билет
-            .additional.special__additional
-                .additional__title Дополнительные услуги
-                .additional__box
-                    .additional__info
-                        .additional__info-title С Вами полетит профессильный фотограф
-                        ul.additional__list
-                            li.additional__item
-                                p.additional__item-text 20 фотографий в профессиональной обработкa
-                            li.additional__item
-                                p.additional__item-text фото книга
-                            li.additional__item
-                                p.additional__item-text магнит на холодильник в подарок
-                    .additional__group
-                        button.btn.additional__btn КУПИТЬ УСЛУГИ ФОТОГРАФА
-                        button.btn.additional__btn ХОЧУ И ДИСК
-                .additional__subtitle Стоимость фотосессии в невесомости 100 000 $.  Доплати 50 000 $ и получи все фото в цветокоррекции на диске.
-            .slider.special__slider
-                button.slider__btn
-                    include images/slider-arrow.svg
-                .slider__content
-                    .slider__content-item
-                        img.slider__content-img(src="images/special_crew.png")
-                button.slider__btn.slider__btn_type_right
-                    include images/slider-arrow.svg
-            p.special__subtitle Ты знаешь о Космическом законе – представь себе то, что ты хочешь, и оно войдет в твою жизнь.
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-section.page.contacts
-    .container
-        .contacts__inner
-            .contacts__inner-top
-                .contacts__box
-                    h3.contacts__box-title контакты
-                    p.contacts__box-text Оставь свои контакты и мы перезвоним тебе в ближайшие 100 лет!
-                .contacts__box
-                    h3.contacts__box-title гарантии
-                    p.contacts__box-text Ни одна моя ракета еще не сделала удачную попытку, потому что в ней не было тебя! Будь первым! Колонизируй Марс! Илон Маск
-            .contacts__inner-bottom
-                form.contacts__form
-                    input.input.contacts__input(placeholder="ФИО")
-                    input.input.contacts__input(placeholder="Имя ребенка или внука (на всякий случай)")
-                    input.input.contacts__input(placeholder="Телефон")
-                    button.btn.contacts__form-btn Забронировать полет
-                img.contacts__img(src="images/contacts_ilon-mask.png")
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-// --- --- --- --- --- --- --- --- ---
-footer.footer
-    .container
-        .footer__inner
-            .footer__description
-                p.footer__description-text Служба поддержки работает межгалактично и суборбитально
-                p.footer__description-text График приема посетителей строго по записи
-            ul.footer__list
-                li.footer__item
-                    a.footer__item-link(href="#") о нас
-                li.footer__item
-                    a.footer__item-link(href="#") стоимость
-                li.footer__item
-                    a.footer__item-link(href="#") доп.услуги
-                li.footer__item
-                    a.footer__item-link(href="#") гарантии
-                li.footer__item
-                    a.footer__item-link(href="#") новости
-            ul.footer__list
-                li.footer__item
-                    a.footer__item-link(href="spacex.com") spacex.com
-                li.footer__item
-                    a.footer__item-link(href="blueorigin.com") blueorigin.com
-                li.footer__item
-                    a.footer__item-link(href="virgingalactic.com") virgingalactic.com
-                li.footer__item.footer__item_color_red
-                    a.footer__item-link(href="tel:080000000000") 0 800 000 000 00
-                li.footer__item
-                    a.footer__item-link(href="#") мкс
+                        button.btn.special__item-btn Забронировать билет
+                .additional.special__additional
+                    .additional__title Дополнительные услуги
+                    .additional__box
+                        .additional__info
+                            .additional__info-title С Вами полетит профессильный фотограф
+                            ul.additional__list
+                                li.additional__item
+                                    p.additional__item-text 20 фотографий в профессиональной обработкa
+                                li.additional__item
+                                    p.additional__item-text фото книга
+                                li.additional__item
+                                    p.additional__item-text магнит на холодильник в подарок
+                        .additional__group
+                            button.btn.additional__btn КУПИТЬ УСЛУГИ ФОТОГРАФА
+                            button.btn.additional__btn ХОЧУ И ДИСК
+                    .additional__subtitle Стоимость фотосессии в невесомости 100 000 $.  Доплати 50 000 $ и получи все фото в цветокоррекции на диске.
+                .slider.special__slider
+                    button.slider__btn
+                        include images/slider-arrow.svg
+                    .slider__content
+                        .slider__content-item
+                            img.slider__content-img(src="images/special_crew.png")
+                    button.slider__btn.slider__btn_type_right
+                        include images/slider-arrow.svg
+                p.special__subtitle Ты знаешь о Космическом законе – представь себе то, что ты хочешь, и оно войдет в твою жизнь.
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    section.page.contacts
+        .container
+            .contacts__inner
+                .contacts__inner-top
+                    .contacts__box
+                        h3.contacts__box-title контакты
+                        p.contacts__box-text Оставь свои контакты и мы перезвоним тебе в ближайшие 100 лет!
+                    .contacts__box
+                        h3.contacts__box-title гарантии
+                        p.contacts__box-text Ни одна моя ракета еще не сделала удачную попытку, потому что в ней не было тебя! Будь первым! Колонизируй Марс! Илон Маск
+                .contacts__inner-bottom
+                    form.contacts__form
+                        input.input.contacts__input(placeholder="ФИО")
+                        input.input.contacts__input(placeholder="Имя ребенка или внука (на всякий случай)")
+                        input.input.contacts__input(placeholder="Телефон")
+                        button.btn.contacts__form-btn Забронировать полет
+                    img.contacts__img(src="images/contacts_ilon-mask.png")
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    // --- --- --- --- --- --- --- --- ---
+    footer.footer
+        .container
+            .footer__inner
+                .footer__description
+                    p.footer__description-text Служба поддержки работает межгалактично и суборбитально
+                    p.footer__description-text График приема посетителей строго по записи
+                ul.footer__list
+                    li.footer__item
+                        a.footer__item-link(href="#") о нас
+                    li.footer__item
+                        a.footer__item-link(href="#") стоимость
+                    li.footer__item
+                        a.footer__item-link(href="#") доп.услуги
+                    li.footer__item
+                        a.footer__item-link(href="#") гарантии
+                    li.footer__item
+                        a.footer__item-link(href="#") новости
+                ul.footer__list
+                    li.footer__item
+                        a.footer__item-link(href="spacex.com") spacex.com
+                    li.footer__item
+                        a.footer__item-link(href="blueorigin.com") blueorigin.com
+                    li.footer__item
+                        a.footer__item-link(href="virgingalactic.com") virgingalactic.com
+                    li.footer__item.footer__item_color_red
+                        a.footer__item-link(href="tel:080000000000") 0 800 000 000 00
+                    li.footer__item
+                        a.footer__item-link(href="#") мкс
