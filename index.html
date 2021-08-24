@@ -441,6 +441,39 @@ body {
   margin: 0 auto;
 }
 
+.booking {
+  background-image: url("images/booking_bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.booking::before {
+  content: "";
+  background: linear-gradient(180deg, #010203 8.85%, rgba(1, 2, 3, 0) 86.98%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.booking__container {
+  display: flex;
+  justify-content: space-between;
+}
+.booking__description {
+  display: flex;
+  position: relative;
+}
+.booking__description-text {
+  font-size: 14px;
+  line-height: 17px;
+  max-width: 165px;
+}
+.booking__description-text + .booking__description-text {
+  margin-left: 53px;
+}
+
 /*# sourceMappingURL=styles.css.map */
 </style><body><!-- ---- --- --- MIXINS --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!--header.page.header.container
     .header__inner
@@ -538,7 +571,17 @@ body {
                         +tableElement("в невесомости", "много", "мин")
                         +tableElement("стоимость", "10", "млн.дол")
                         +tableElement("вернешься?", "1", "%")
-                button.about-us__box-btn Забронировать полет--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><section class="page how"><div class="container"><div class="page__title">Как все происходит</div><div class="how__inner"><div class="constellation how__constellation"><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Выбираем программу</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Оплачиваете</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Какая-то будет подготовка</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Садимся. Летим. Невесомость.</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Едим из тюбиков: 5 видов меню на выбор (веган, спорт,) безлактозное, безглютеновое, обычное</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Приземляемся, но это не точно</div></div><div class="constellation__star"><div class="constellation__star-circle"></div><div class="constellation__star-text">Делаем фото в инстаграм</div></div></div></div></div></section><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="scripts/slick.min.js"></script><script src="scripts/jquery.fancybox.min.js"></script><script src="scripts/main.js"></script><script>function windowWidth() {
+                button.about-us__box-btn Забронировать полет--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!--section.page.how.container
+    .page__title Как все происходит
+    .how__inner
+        .constellation.how__constellation
+            +star("Выбираем программу")
+            +star("Оплачиваете")
+            +star("Какая-то будет подготовка")
+            +star("Садимся. Летим. Невесомость.")
+            +star("Едим из тюбиков: 5 видов меню на выбор (веган, спорт,) безлактозное, безглютеновое, обычное")
+            +star("Приземляемся, но это не точно")
+            +star("Делаем фото в инстаграм")--><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><!-- --- --- --- --- --- --- --- --- -----><section class="page booking"><div class="container booking__container"><div class="page__title">Успей забронировать!</div><div class="booking__description"><p class="booking__description-text">Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года. Компания уже несколько лет продает билеты на такие полеты по 250 тыс долл.</p><p class="booking__description-text">Virgin Galactic получила задатков более чем 80 млн долл, а количество желающих превышает 600 человек.</p></div></div></section><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script><script src="scripts/slick.min.js"></script><script src="scripts/jquery.fancybox.min.js"></script><script src="scripts/main.js"></script><script>function windowWidth() {
     const element = document.createElement('div')
     element.innerText = `${innerWidth}px/${innerHeight}px`
     element.style.position = "fixed"
