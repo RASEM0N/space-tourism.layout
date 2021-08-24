@@ -135,14 +135,60 @@ mixin star(text)
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
 // --- --- --- --- --- --- --- --- ---
-section.page.booking
+//section.page.booking
     .container.booking__container
         .page__title Успей забронировать!
         .booking__description
             p.booking__description-text Руководство Virgin Galactic надеется, что массовые суборбитальные космические полеты начнутся до 2022 года. Компания уже несколько лет продает билеты на такие полеты по 250 тыс долл.
             p.booking__description-text Virgin Galactic получила задатков более чем 80 млн долл, а количество желающих превышает 600 человек.
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+// --- --- --- --- --- --- --- --- ---
+section.page.special
+    .container
+        .page__title Спец. предложения
+        .special__inner
+            .special__list
+                .special__item
+                    .special__item-info
+                        p.special__item-text Забронируй полет <span>прямо сейчас</span> и получи скидку 1000$
+                        .special__price
+                            .special__price-old 250 000 $
+                            .special__price-now 249 000 $
+                    button.btn.special__item-btn Забронировать билет
+                .special__item
+                    .special__item-info
+                        p.special__item-text Приведи друга и получи <span>скидку 10%</span> на следующий полет, если вернешься
+                        .special__price
+                            .special__price-old 250 000 $
+                            .special__price-now 225 000 $
 
-
+                    button.btn.special__item-btn Забронировать билет
+            .additional.special__additional
+                .additional__title Дополнительные услуги
+                .additional__box
+                    .additional__info
+                        .additional__info-title С Вами полетит профессильный фотограф
+                        ul.additional__list
+                            li.additional__item
+                                p.additional__item-text 20 фотографий в профессиональной обработкa
+                            li.additional__item
+                                p.additional__item-text фото книга
+                            li.additional__item
+                                p.additional__item-text магнит на холодильник в подарок
+                    .additional__group
+                        button.btn.additional__btn КУПИТЬ УСЛУГИ ФОТОГРАФА
+                        button.btn.additional__btn ХОЧУ И ДИСК
+                .additional__subtitle Стоимость фотосессии в невесомости 100 000 $.  Доплати 50 000 $ и получи все фото в цветокоррекции на диске.
+            .slider.special__slider
+                button.slider__btn
+                    include images/slider-arrow.svg
+                .slider__content
+                    .slider__content-item
+                        img.slider__content-img(src="images/special_crew.png")
+                button.slider__btn.slider__btn_type_right
+                    include images/slider-arrow.svg
+            p.special__subtitle Ты знаешь о Космическом законе – представь себе то, что ты хочешь, и оно войдет в твою жизнь.
 
 
 

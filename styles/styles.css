@@ -43,7 +43,7 @@ button {
 }
 button:hover {
   background-color: rgba(0, 27, 161, 0.08);
-  transform: scale(1.05);
+  transform: scale(1.01);
 }
 
 body {
@@ -121,25 +121,6 @@ body {
 .table__extra::before {
   content: "✱";
   margin-right: 7.2px;
-}
-
-.menu__list {
-  display: flex;
-}
-.menu__item {
-  text-transform: uppercase;
-  font-size: 18px;
-  line-height: 21px;
-}
-.menu__item + .menu__item {
-  margin-left: 30px;
-}
-.menu__item_actived {
-  color: #cb0e0e;
-}
-.phone {
-  font-size: 24px;
-  line-height: 29px;
 }
 
 .constellation {
@@ -253,6 +234,97 @@ body {
   top: -40px;
   left: 199px;
   width: 115px;
+}
+
+.additional__title {
+  font-family: "Space Age", sans-serif;
+  font-size: 48px;
+  line-height: 48px;
+  margin-bottom: 100px;
+  max-width: 600px;
+}
+.additional__box {
+  display: flex;
+  margin-bottom: 12px;
+}
+.additional__info {
+  margin-right: 83px;
+}
+.additional__info-title {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 25px;
+}
+.additional__list {
+  list-style: none;
+}
+.additional__item {
+  display: flex;
+}
+.additional__item::before {
+  content: "";
+  background-color: #ffffff;
+  border-radius: 50%;
+  transform: translateY(4px);
+  display: inline-block;
+  margin-right: 15px;
+  width: 20px;
+  height: 20px;
+}
+.additional__item-text {
+  font-size: 24px;
+  line-height: 29px;
+}
+.additional__group {
+  flex: 1;
+}
+.additional__btn {
+  display: block;
+  width: 100%;
+}
+.additional__btn + .additional__btn {
+  margin-top: 50px;
+}
+.additional__subtitle {
+  font-size: 12px;
+  line-height: 14px;
+  color: #e5e5e5;
+}
+
+.slider {
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 74px;
+}
+.slider__btn_type_right svg {
+  transform: rotate(180deg);
+}
+.menu__list {
+  display: flex;
+}
+.menu__item {
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 21px;
+}
+.menu__item + .menu__item {
+  margin-left: 30px;
+}
+.menu__item_actived {
+  color: #cb0e0e;
+}
+.phone {
+  font-size: 24px;
+  line-height: 29px;
+}
+
+.btn {
+  font-size: 18px;
+  line-height: 21px;
+  text-transform: uppercase;
+  border: 1px solid #ffffff;
+  padding: 20px 10px;
 }
 
 .header {
@@ -472,6 +544,92 @@ body {
 }
 .booking__description-text + .booking__description-text {
   margin-left: 53px;
+}
+
+.special {
+  background-image: url("images/us&special_bg.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.special::before {
+  content: "";
+  background: linear-gradient(180deg, #010203 0%, rgba(1, 2, 3, 0) 84.9%);
+  transform: rotate(-180deg);
+  position: absolute;
+  top: 65%;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+.special__inner {
+  position: relative;
+}
+.special__additional {
+  margin-bottom: 200px;
+}
+.special__list {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 150px;
+}
+.special__item-info {
+  border: 1px solid #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  padding-top: 43px;
+  padding-bottom: 38px;
+  width: 500px;
+  height: 400px;
+}
+.special__item-text {
+  font-size: 24px;
+  line-height: 29px;
+  text-align: center;
+  max-width: 236px;
+}
+.special__item-text span {
+  color: #cb0e0e;
+}
+.special__price {
+  position: relative;
+}
+.special__price-old {
+  font-size: 14px;
+  line-height: 17px;
+  color: #e5e5e5;
+  position: absolute;
+  top: -32px;
+  right: -60px;
+}
+.special__price-old::before {
+  content: "";
+  border: 1px solid #cb0e0e;
+  transform: rotate(17.1deg);
+  position: absolute;
+  top: 7px;
+  width: 68px;
+}
+.special__price-now {
+  font-size: 48px;
+  line-height: 57px;
+}
+.special__item-btn {
+  width: 100%;
+}
+.special__subtitle {
+  font-family: "Space Age", sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 50px;
 }
 
 /*# sourceMappingURL=styles.css.map */
